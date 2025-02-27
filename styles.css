@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Form & Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    background: #4a90e2;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #3578e5;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
