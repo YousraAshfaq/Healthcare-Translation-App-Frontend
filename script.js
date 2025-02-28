@@ -11,7 +11,7 @@ async function translateText() {
     console.log("📢 Sending translation request:", { text, targetLang }); // Debugging log
 
     try {
-        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app/", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app/translate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text, targetLang })
