@@ -1,7 +1,7 @@
 async function translateText() {
     const text = document.getElementById("transcript").value;
     const targetLang = document.getElementById("output-lang").value.toLowerCase(); // Convert to lowercase
-const API_BASE_URL = "https://healthcare-translation-app-backe-production.up.railway.app";
+
 
     if (!text) {
         alert("Please enter text to translate.");
@@ -11,7 +11,7 @@ const API_BASE_URL = "https://healthcare-translation-app-backe-production.up.rai
     console.log("📢 Sending translation request:", { text, targetLang }); // Debugging log
 
     try {
-        const response = await fetch(`${API_BASE_URL}/translate`, {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text, targetLang })
@@ -59,7 +59,7 @@ async function loginUser() {
     const password = document.getElementById("login-password").value;
 
     try {
-        const response = await fetch(`${API_BASE_URL}'//login", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app//login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
@@ -88,7 +88,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await fetch(`${API_BASE_URL}'//register", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app//register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password })
